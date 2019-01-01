@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Watson Conversation Service Credentials --> 
+    <string name="workspace_id">1b1d91e6-fcf5-4f10-8e1f-8863023ed33a</string> 
+    <string name="conversation_username">f8404554-f6e6-452c-90bb-2f7e06270874</string> 
+    <string name="conversation_password">FujRvYi4g6FM</string>  
+
+    <!--Watson Speech-To-Text Service Credentials--> 
+    <string name="STT_username">312d40e6-9d2b-4b52-ae51-aabd9391f917</string> 
+    <string name="STT_password">OYvAUXzO7glb</string>  
+
+    <!--Watson Text-To-Speech Service Credentials--> 
+    <string name="TTS_username">eda1604d-0c0e-4033-9163-ce5415fd6803</string>  
+    <string name="TTS_password">ULFGkNAh7v3x</string>
+
+    
+
+</resources>

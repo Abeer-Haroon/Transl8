@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6db0a6</color>
+    <color name="colorPrimaryDark">#424a49</color>
+    <color name="colorAccent">#424a49</color>
+    <color name="radioC">#424a49</color>
+    <color name="yos">#6db0a6</color>
+    <color name="greyo">#468179</color>
+    <color name="redd">#a8344d</color>
+</resources>
