@@ -60,11 +60,11 @@ Once you've followed the instructions above to get credentials, they should be a
 The application uses IBM Watson translator service to translate the text written in English.
 A user can enter the text and then with the press of a button, the text is translated to the language selected.
 
-![](red2.png)
+![](red2.jpg)
 
 #### Translate Code
 
-![](red1.png)
+![](red1.jpg)
 
 
 ### SPEAK
