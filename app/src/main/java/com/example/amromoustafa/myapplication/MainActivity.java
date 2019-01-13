@@ -20,12 +20,24 @@ import com.ibm.watson.developer_cloud.service.security.IamOptions;
 import com.ibm.watson.developer_cloud.text_to_speech.v1.TextToSpeech;
 import com.ibm.watson.developer_cloud.text_to_speech.v1.model.SynthesizeOptions;
 
+//************* Changes required for the program to work **************
+/*
+From Service Credentials:
+1. api key
+2. url
+*/
+
 public class MainActivity extends AppCompatActivity {
     private EditText input;
     private ImageButton mic;
+
+    //Buttons for translate and speak
     private Button translate;
     private Button speak;
+
     private ImageButton play;
+
+    //TextView to display translated text
     private TextView translatedText;
 
     private LanguageTranslator translationService;
@@ -34,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
     //variable for the Text To Speech service to be used according to the Radio Button options.
     private String speakLanguage;
     private StreamPlayer player = new StreamPlayer();
-    //private View speak;
     private String firstTranslation = "";
     private TextToSpeech textToSpeech;
 
@@ -54,21 +65,20 @@ public class MainActivity extends AppCompatActivity {
 
         RadioGroup targetLanguage = findViewById(R.id.target_language);
         input = findViewById(R.id.input);
-//        mic = findViewById(R.id.mic);
         translate = findViewById(R.id.translate);
 
         speak = findViewById(R.id.speak);
-//        play = findViewById(R.id.play);
         translatedText = findViewById(R.id.translated_text);
 
         targetLanguage.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                //Code for selecting the language the text should be translated to
                 switch (checkedId) {
                     case R.id.spanish:
                         selectedTargetLanguage = Language.SPANISH;
                         speakLanguage = SynthesizeOptions.Voice.ES_ES_LAURAVOICE; //set the speaking language to spanish
-
                         break;
                     case R.id.french:
                         selectedTargetLanguage = Language.FRENCH;
@@ -83,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //Check if the translate button is clicked. Then check if text is provided to translate.
         translate.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -105,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Show the translated text in the text view field.
     private void showTranslation(final String translation) {
         runOnUiThread(new Runnable() {
             @Override
@@ -115,25 +127,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Use IBM Watson Translator to translate the provided text
     private LanguageTranslator initLanguageTranslatorService() {
         IamOptions options = new IamOptions.Builder()
-                .apiKey("39wIftedETesYusnk2LYpXcmWcgoCcGTC4iIXFC3-FFG")
+                .apiKey("apikey")  //Add your api key here
                 .build();
 
         LanguageTranslator service = new LanguageTranslator("2018-05-01", options);
 
-        service.setEndPoint("https://gateway-wdc.watsonplatform.net/language-translator/api");
+        service.setEndPoint("url");  //Add your url here
         return service;
     }
 
+    //Use IBM Text-to-Speech to speak the translated text.
     public void speakup(View view) {
         IamOptions options = new IamOptions.Builder()
-                .apiKey("4Bk_bMAbeOB_kLsElJkpnhpgOZHaXggZ82EZSs8iU2Q6")
+                .apiKey("apikey")   //Add your api key here
                 .build();
 
         textToSpeech = new TextToSpeech(options);
 
-        textToSpeech.setEndPoint("https://gateway-syd.watsonplatform.net/text-to-speech/api");
+        textToSpeech.setEndPoint("url");   //Add your url here
+
+        //If no text is entered to translate, prompt the user
         if (firstTranslation.equals("")) {
             Toast.makeText(getApplicationContext(), "Please translate first", Toast.LENGTH_SHORT).show();
         } else {
@@ -141,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Translate the text entered in the language selected
     private class TranslationTask extends AsyncTask<String, Void, String> {
 
         @Override
@@ -160,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Play the audio for translated word in the language selected
     private class SynthesisTask extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... params) {
