@@ -50,7 +50,7 @@ A user can enter the text and then with the press of a button, the text is trans
 
 ![](Picture2.png)
 
-#### Translate Code
+#### [Translate Code](https://github.com/watson-developer-cloud/android-sdk)
 
 Add the api key and url from your service credentials in the code below in place of apikey and url.
 
@@ -62,7 +62,7 @@ Add the api key and url from your service credentials in the code below in place
 The application uses IBM Watson Text-to-Speech service to convert the written text to speech so the user can learn how to pronounce translated words/sentences.
 With the press of a button, the translated text is converted to speech in the language selected.
 
-#### Text-to-Speech Code
+#### [Text-to-Speech Code](https://github.com/watson-developer-cloud/android-sdk)
 
 Add the api key and url from your service credentials in the code below in place of apikey and url.
 
@@ -70,3 +70,4 @@ Add the api key and url from your service credentials in the code below in place
 
 Once you're done adding the credentials, you're ready to go!
 Run the app. Translate and learn different languages the easy way!
+You can use Android SDK to use other IBM Watson services in your android app at:https://github.com/watson-developer-cloud/android-sdk . 
