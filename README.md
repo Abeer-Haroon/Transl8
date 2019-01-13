@@ -41,7 +41,9 @@ Once you've followed the instructions above to get credentials, they should be a
 
 ### Switch Code
 
+
 ![](Picture3.png)
+
 
 ### TRANSLATE
 
@@ -70,4 +72,4 @@ Add the api key and url from your service credentials in the code below in place
 
 Once you're done adding the credentials, you're ready to go!
 Run the app. Translate and learn different languages the easy way!
-You can use Android SDK to use other IBM Watson services in your android app at:https://github.com/watson-developer-cloud/android-sdk . 
+You can use Android SDK to use other IBM Watson services in your android app at: https://github.com/watson-developer-cloud/android-sdk . 
