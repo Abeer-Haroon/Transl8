@@ -28,19 +28,7 @@ Also, being a translator in foreign countries to avoid communication barrier bet
 
 #### Adding the Credentials
 
-Once you've followed the instructions above to get credentials, they should be added to the `example/res/values/credentials.xml` file shown below.
-
-```xml
-<resources>
-  <!-- Paste Language Translator information here -->
-  <string name="language_translator_iam_apikey"></string>
-  <string name="language_translator_url"></string>
-
-  <!-- Paste Text to Speech information here -->
-  <string name="text_speech_iam_apikey"></string>
-  <string name="text_speech_url"></string>
-</resources>
-```
+Once you've followed the instructions above to get credentials, they should be added to the code shown below.
 
 ## ARCHITECTURE
 
@@ -64,6 +52,8 @@ A user can enter the text and then with the press of a button, the text is trans
 
 #### Translate Code
 
+Add the api key and url from your service credentials in the code below in place of apikey and url.
+
 ![](red2.jpg)
 
 
@@ -74,6 +64,9 @@ With the press of a button, the translated text is converted to speech in the la
 
 #### Text-to-Speech Code
 
+Add the api key and url from your service credentials in the code below in place of apikey and url.
 
 ![](red2.jpg)
 
+Once you're done adding the credentials, you're ready to go!
+Run the app. Translate and learn different languages the easy way!
