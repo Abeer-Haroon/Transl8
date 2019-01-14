@@ -19,34 +19,12 @@
 
     -
 
-    <RadioGroup
-        android:id="@+id/target_language"
-        android:layout_width="match_parent"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/spanish"
-            android:layout_width="116dp"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/spanish"
-            android:textColorLink="@color/radioC" />
-
-        <RadioButton
-            android:id="@+id/french"
-            android:layout_width="112dp"
-            android:layout_height="wrap_content"
-            android:text="@string/french"
-            android:textColorLink="@color/colorAccent" />
-
-        <RadioButton
-            android:id="@+id/italian"
-            android:layout_width="197dp"
-            android:layout_height="wrap_content"
-            android:text="@string/italian" />
-
-    </RadioGroup>
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp" />
 
 
     -
